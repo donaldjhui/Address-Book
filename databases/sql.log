@@ -1,0 +1,156 @@
+timestamp: 2020-04-25T13:35:32.203814
+CREATE TABLE "py4web_session"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "rkey" CHAR(512),
+    "rvalue" TEXT,
+    "expiration" INTEGER,
+    "created_on" TIMESTAMP,
+    "expires_on" TIMESTAMP
+);
+success!
+timestamp: 2020-04-25T13:35:32.233862
+CREATE TABLE "auth_user"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "email" CHAR(512) UNIQUE,
+    "password" CHAR(512),
+    "first_name" CHAR(512),
+    "last_name" CHAR(512),
+    "sso_id" CHAR(512),
+    "action_token" CHAR(512)
+);
+success!
+timestamp: 2020-04-25T13:35:32.249672
+CREATE TABLE "auth_user_tag_groups"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "path" CHAR(512),
+    "record_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2020-04-25T14:07:34.210541
+CREATE TABLE "person"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "first_name" CHAR(512),
+    "last_name" CHAR(512),
+    "user_email" CHAR(512)
+);
+success!
+timestamp: 2020-04-28T12:02:41.078382
+CREATE TABLE "contact"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "phone" CHAR(512),
+    "kind" CHAR(512)
+);
+success!
+timestamp: 2020-04-28T12:05:29.978544
+ALTER TABLE "contact" ADD "user_email" CHAR(512);
+success!
+timestamp: 2020-04-28T13:42:31.164301
+ALTER TABLE "contact" ADD "first_name" CHAR(512);
+timestamp: 2020-04-28T13:42:31.178257
+ALTER TABLE "contact" ADD "last_name" CHAR(512);
+success!
+timestamp: 2020-04-28T14:07:47.482887
+ALTER TABLE "contact" ADD "contact_id" CHAR(512);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2020-05-06T11:48:51.264983
+ALTER TABLE "auth_user" ADD "last_password_change" TIMESTAMP;
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
