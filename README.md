@@ -1,4 +1,4 @@
-**Address Book**
+**AddressOrganizer**
 
 Summary:
 - An address book allowing the user to add, remove, and edit contacts.
